@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    </head>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: orange;
+            position: absolute;
+            left: 0;
+            top: 0px;
+        }
+        .character {
+            position: absolute;
+            left: 100px;
+            top: 100px;
+        }
+        .textbox {
+            background-color: lightcoral;
+            font-size: 80px;
+            margin: 100px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+    <body>
+        <div class="box">ggg</div>
+        <button class="animationBtn">시작시작</button>
+        <h1 class="title">Hello World</h1>
+        <div class="character">
+            <img src="./Image20240813150452.png" alt="" />
+        </div>
+        <div class="textbox"><h2>HiHi</h2></div>
+        <div class="textbox"><h2>HiHi</h2></div>
+        <div class="textbox"><h2>HiHi</h2></div>
+        <div class="textbox target"><h2>HiHi</h2></div>
+        <div class="textbox"><h2>HiHi</h2></div>
+    </body>
+    <!-- script -->
+    <script>
+        const box = document.querySelector(".box");
+        const animationBtn = document.querySelector(".animationBtn");
+        const title = document.querySelector(".title");
+        const character = document.querySelector(".character");
+
+        function moveBox() {
+            gsap.to(box, 2, { left: "1000px" });
+            gsap.to(title, 2, { opacity: 1 });
+            gsap.fromTo(
+                character,
+                { x: 700, y: 70, opacity: 0, scale: 1 },
+                { x: 400, y: 200, duration: 2, opacity: 1, scale: 2 }
+            );
+        }
+
+        animationBtn.addEventListener("click", moveBox);
+
+        gsap.set(title, { css: { opacity: 0 } });
+
+        // textbox
+        gsap.to(".target h2", {
+            scrollTrigger: {
+                trigger: ".target",
+                start: "0% 0%",
+                end: "100% 10%",
+                markers: true,
+                scrub: 1,
+            },
+            scale: 2,
+            rotation: 180,
+        });
+    </script>
+</html>

@@ -8,8 +8,11 @@
             rel="stylesheet"
             href="https://cdn.jsdelivr.net/npm/reset-css@4.0.1/reset.min.css"
         />
+        <!-- google font -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+        <!-- google Materials -->
         <link
             rel="stylesheet"
             href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
@@ -18,13 +21,25 @@
             href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap"
             rel="stylesheet"
         />
+        <link rel="stylesheet" href="./css/common.css" />
+        <link rel="stylesheet" href="./css/main.css" />
+        <!-- swiper -->
         <link
             rel="stylesheet"
             href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
         />
-        <link rel="stylesheet" href="./css/common.css" />
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <!-- scrollMagic -->
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"
+            integrity="sha512-8E3KZoPoZCD+1dgfqhPbejQBnQfBXe8FuwL4z/c8sTrgeDMFEnoyTlH3obB4/fV+6Sg0a0XF+L/6xS4Xx1fUEg=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        ></script>
+        <!-- GSAP & ScrollToPlugin -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
         <script defer src="./js/main.js"></script>
-        <script defer src="./js/common.js"></script>
     </head>
     <body>
         <div id="wrap">
@@ -473,7 +488,7 @@
                 <div class="main-visual_wrap">
                     <div class="main-visual_inner inner">
                         <div class="left_wrap">
-                            <div class="main-visual_slogan">
+                            <div class="main-visual_slogan fade-in">
                                 <div class="pc_size">
                                     <img
                                         src="./img/25th_top_slogan.png"
@@ -495,7 +510,7 @@
                             </div>
                         </div>
                         <div class="main-visual_set">
-                            <div class="set_common set_01">
+                            <div class="set_common set_01 fade-in">
                                 <div class="pc_size">
                                     <img
                                         src="./img/2024_august_drink1.png"
@@ -509,7 +524,10 @@
                                     />
                                 </div>
                             </div>
-                            <div class="set_common set_02" style="opacity: 1">
+                            <div
+                                class="set_common set_02 fade-in"
+                                style="opacity: 1"
+                            >
                                 <div class="pc_size">
                                     <img
                                         src="./img/2024_august_drink2.png"
@@ -523,7 +541,10 @@
                                     />
                                 </div>
                             </div>
-                            <div class="set_common set_03" style="opacity: 1">
+                            <div
+                                class="set_common set_03 fade-in"
+                                style="opacity: 1"
+                            >
                                 <div class="pc_size">
                                     <img
                                         src="./img/2024_august_drink3.png"
@@ -537,7 +558,10 @@
                                     />
                                 </div>
                             </div>
-                            <div class="set_common set_04" style="opacity: 1">
+                            <div
+                                class="set_common set_04 fade-in"
+                                style="opacity: 1"
+                            >
                                 <div class="pc_size">
                                     <img
                                         src="./img/2024_august_drink4.png"
@@ -557,6 +581,8 @@
             </section>
             <section id="notice">
                 <div class="notice_line">
+                    <div class="notice_left"></div>
+                    <div class="notice_right"></div>
                     <div class="inner">
                         <div class="inner_left">
                             <h2>공지사항</h2>
@@ -590,14 +616,13 @@
                                 <li class="material-symbols-outlined">
                                     expand_less
                                 </li>
-                                <li class="material-symbols-outlined off">
+                                <!-- <li class="material-symbols-outlined off">
                                     expand_more
-                                </li>
+                                </li> -->
                             </ul>
                         </div>
                     </div>
                 </div>
-                <!-- 스타벅스 프로모션 -->
                 <div class="promotion">
                     <div class="swiper">
                         <div class="swiper-wrapper">
@@ -606,41 +631,45 @@
                                     src="./img/tkJyS3_20240521155137816.jpg"
                                     alt="promotion1"
                                 />
-                                <a href="#">자세히보기</a>
+                                <a href="#" class="btn">자세히 보기</a>
                             </div>
                             <div class="swiper-slide">
                                 <img
                                     src="./img/cfFwxf_20240801154828783.jpg"
-                                    alt="promotion2"
+                                    alt="promotion1"
                                 />
-                                <a href="#">자세히보기</a>
+                                <a href="#" class="btn">자세히 보기</a>
                             </div>
                             <div class="swiper-slide">
                                 <img
                                     src="./img/tkJyS3_20240521155137816.jpg"
-                                    alt="promotion3"
+                                    alt="promotion1"
                                 />
-                                <a href="#">자세히보기</a>
+                                <a href="#" class="btn">자세히 보기</a>
+                            </div>
+                            <div class="swiper-slide">
+                                <img
+                                    src="./img/cfFwxf_20240801154828783.jpg"
+                                    alt="promotion1"
+                                />
+                                <a href="#" class="btn">자세히 보기</a>
                             </div>
                         </div>
-                        <!-- If we need pagination -->
                         <div class="swiper-pagination"></div>
-
-                        <!-- If we need navigation buttons -->
                         <div class="swiper-prev">
-                            <span class="material-symbols-outlined">
-                                arrow_back_ios
-                            </span>
+                            <span class="material-symbols-outlined"
+                                >arrow_back_ios</span
+                            >
                         </div>
                         <div class="swiper-next">
-                            <span class="material-symbols-outlined">
-                                arrow_forward_ios
-                            </span>
+                            <span class="material-symbols-outlined"
+                                >arrow_forward_ios</span
+                            >
                         </div>
                     </div>
                 </div>
             </section>
-            <section id="main2">
+            <section id="main2" class="scroll">
                 <div class="main2_inner inner">
                     <div class="main2_logo">
                         <img src="./img/rewards-logo.png" alt="" />
@@ -699,9 +728,9 @@
                     </div>
                 </div>
             </section>
-            <section id="main3">
+            <section id="main3" class="scroll">
                 <div class="m3_inner inner">
-                    <div class="m3_box1">
+                    <div class="m3_box1 toPosition toRight">
                         <div class="pc_size">
                             <img
                                 src="./img/25th_summer_bean.png"
@@ -715,7 +744,7 @@
                             />
                         </div>
                     </div>
-                    <div class="m3_box2">
+                    <div class="m3_box2 toPosition toLeft">
                         <div class="m3_box2_img">
                             <div class="pc_size">
                                 <img
@@ -760,25 +789,25 @@
                     </div>
                 </div>
             </section>
-            <section id="main5">
+            <section id="main5" class="scroll">
                 <div class="m5_inner inner">
                     <div class="m5_box_left">
                         <div class="m5_text mb_30">
-                            <div class="mb_30 pc_size">
+                            <div class="mb_30 pc_size toPosition toRight">
                                 <img
                                     src="./img/fav_prod_txt01.png"
                                     alt="pick your favorite"
                                     class="mb_30"
                                 />
                             </div>
-                            <div class="pc_size">
+                            <div class="pc_size toPosition toRight">
                                 <img
                                     src="./img/2024_5_say_thanks_pick_txt.png"
                                     alt="pick your favorite"
                                 />
                             </div>
                         </div>
-                        <div class="m5_btn">
+                        <div class="m5_btn toPosition toRight">
                             <a href="" class="btn btn--white">자세히보기</a>
                         </div>
                     </div>
@@ -788,7 +817,7 @@
                 </div>
             </section>
 
-            <section id="main6">
+            <section id="main6" class="scroll">
                 <div class="m6_inner inner">
                     <div class="m6_box_left pc_size">
                         <div class="m6_text mb_30">
@@ -799,7 +828,7 @@
                             <a href="" class="btn">자세히보기</a>
                         </div>
                     </div>
-                    <div class="m6_box_right pc_size">
+                    <div class="m6_box_right pc_size toPosition toRight">
                         <img src="./img/reserve_visual_pc.png" alt="" />
                         <!-- <img
                             class="mo_size"
@@ -813,7 +842,7 @@
                 </div>
             </section>
 
-            <section id="main7">
+            <section id="main7" class="scroll">
                 <div class="m7_inner inner">
                     <div class="m7_box_left">
                         <div class="m7_img1">
@@ -829,7 +858,7 @@
                             />
                         </div>
                     </div>
-                    <div class="m7_box_right">
+                    <div class="m7_box_right toPosition toLeft">
                         <div class="m7_text mb_30 pc_size">
                             <img
                                 src="./img/221212_pc_main_story_txt_1.png"
@@ -853,7 +882,7 @@
                         </div>
                         <div class="m7_text mo_size">
                             <img
-                                src="./img/221213_m_main_story_txt_2.png"
+                                src="./img/221212_m_main_story_txt_2.png"
                                 alt=""
                             />
                         </div>
